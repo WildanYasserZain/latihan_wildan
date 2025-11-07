@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg: #0e0e14;
+  --primary: #1a1a2e;
+  --accent: #00d4ff;
+  --text: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, var(--primary), #22223b);
+  text-align: center;
+  padding: 10px 20px;
+  position: relative;
+  box-shadow: 0 2px 10px #00d4ff40;
+}
+
+header .logo {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+  object-fit: contain;
+  position: relative;
+  left: 0;
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 10px;
+  color: var(--accent);
+  font-size: 1.5em;
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* Animasi teks berjalan */
+@keyframes slideText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #1f1f2e;
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+
+.menu a:hover {
+  background-color: var(--accent);
+  color: black;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 48px;
+  background-color: #23233e;
+  list-style: none;
+  padding: 0;
+  min-width: 150px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+main {
+  flex: 3;
+  padding: 20px;
+  background-color: #161625;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00d4ff50;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+aside {
+  flex: 1;
+  padding: 20px;
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  margin-left: 0px;
+  margin-top: 20px;
+  box-shadow: 0 0 8px #00d4ff50;
+}
+
+/* TABLE */
+.classment {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.classment th, .classment td {
+  border: 1px solid #00d4ff;
+  padding: 8px;
+  text-align: center;
+}
+
+.classment th {
+  background-color: var(--accent);
+  color: black;
+}
+
+/* ARTICLES */
+.articles article {
+  border-bottom: 1px solid #333;
+  padding: 10px ;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articles article:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 0 15px #00d4ff40;
+}
+
+.readmore {
+  color: var(--accent);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: #1f1f2e;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+button {
+  background-color: var(--accent);
+  border: none;
+  color: black;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--primary);
+}
+
+/* TICKER (Teks Berjalan Modern) */
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #111, #1a1a2e);
+  color: var(--accent);
+  padding: 8px 0;
+  margin-top: 10px;
+  box-shadow: inset 0 0 10px #00d4ff40;
+}
+
+#ticker-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tickerMove 10s linear infinite;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+@keyframes tickerMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+/* === Player Musik Elegan === */
+.music-player {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  background: rgba(10, 20, 30, 0.8);
+  padding: 10px 18px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #00bfff;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.music-player:hover {
+  box-shadow: 0 0 25px #00eaff, 0 0 40px #0088ff inset;
+}
+
+.music-player .music-icon {
+  color: #00eaff;
+  font-size: 1.3em;
+  animation: glow 2s infinite alternate;
+}
+
+.music-player .song-title {
+  color: #00eaff;
+  font-size: 0.9em;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Efek glowing pada ikon musik */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #00eaff; }
+  to { text-shadow: 0 0 20px #00eaff, 0 0 30px #0088ff; }
+}
+
+.music-player button {
+  color: #00eaff;
+  background: linear-gradient(90deg, #001d33, #002a44);
+  border: 1px solid #00eaff;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+}
+
+.music-player button:hover {
+  background: linear-gradient(90deg, #00bfff, #0077ff);
+  color: #fff;
+  box-shadow: 0 0 15px #00eaff;
+  transform: scale(1.05);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00eaff, #0077ff);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0e14;
+}

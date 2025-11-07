@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - MPL Indonesia</title>
+  <link rel="stylesheet" href="uts.css">
+  <link rel="icon" type="image/png" href="favicon (1).ico">
+</head>
+<body>
+  <header>
+    <img src="logo mpl.webp" class="logo">
+    <h1>Hubungi MPL Indonesia</h1>
+  </header>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>📞 Contact Us</h2>
+    <p>Jika kamu memiliki pertanyaan atau ingin bekerja sama, silakan hubungi kami melalui form di bawah ini:</p>
+
+    <form id="contactForm" onsubmit="validateContact(event)">
+      <label>Nama:</label>
+      <input type="text" id="contact-name" placeholder="Nama kamu">
+      <label>Email:</label>
+      <input type="email" id="contact-email" placeholder="Email aktif">
+      <label>Institusi / Tim:</label>
+      <input type="text" id="contact-org" placeholder="Nama institusi / tim">
+      <label>Pesan:</label>
+      <textarea id="contact-message" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+
+    <h3>🌐 Social Media</h3>
+    <ul>
+      <li><a href="https://www.instagram.com/mpl.id.official?igsh=am9qNTNmZnFlYmo5">Instagram</a></li>
+      <li><a href="https://youtube.com/@mplindonesia?si=hctKYkckDDwQp-4s">YouTube</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 MPL Indonesia</p>
+  </footer>
+
+   <script src="uts.js" defer></script>
+</body>
+</html>
